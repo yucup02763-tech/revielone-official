@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="RevielOne resmi müzik sitesi — YSF Music">
-<title>RevielOne — YSF Music</title>
+<meta name="description" content="RevielOne resmi müzik sitesi. Unuturum Sanmam şarkısını dinle ve indir; lisanslı beatleri keşfet. YSF Music.">
+<title>RevielOne — Unuturum Sanmam & Beat Store | YSF Music</title>
 <style>
 :root{
   --bg:#050608;
@@ -129,6 +129,48 @@ h2{font-size:clamp(2.7rem,5.4vw,5rem)}
 .upload p{margin:0;color:var(--muted);line-height:1.6}
 #fileInput,#coverInput{display:none}
 
+
+.release-shell{
+  display:grid;grid-template-columns:320px 1fr;gap:28px;align-items:stretch;
+  padding:24px;background:linear-gradient(145deg,rgba(20,25,37,.98),rgba(8,10,14,.98));
+  border:1px solid var(--line);box-shadow:var(--shadow);position:relative;overflow:hidden
+}
+.release-shell:before{
+  content:"";position:absolute;inset:auto -100px -150px auto;width:330px;height:330px;
+  border-radius:50%;background:radial-gradient(circle,rgba(183,255,47,.15),transparent 68%)
+}
+.release-art{
+  min-height:310px;border:1px solid var(--line);position:relative;overflow:hidden;
+  background:linear-gradient(160deg,#252b35,#090b0f)
+}
+.release-art:before{
+  content:"R1";position:absolute;inset:0;display:grid;place-items:center;font-size:6rem;
+  font-weight:1000;letter-spacing:-.08em;color:rgba(255,255,255,.08)
+}
+.release-art:after{
+  content:"UNUTURUM SANMAM";position:absolute;left:24px;bottom:22px;right:24px;
+  font-weight:1000;font-size:1.45rem;letter-spacing:.08em
+}
+.release-info{padding:16px 10px;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:1}
+.release-info h3{font-size:clamp(2rem,4vw,3.6rem);margin:8px 0 12px;letter-spacing:-.04em}
+.release-info>p{color:var(--muted);line-height:1.75;max-width:620px}
+.waveform{height:62px;display:flex;align-items:center;gap:5px;margin:24px 0}
+.waveform i{width:4px;border-radius:999px;background:linear-gradient(var(--accent),var(--accent2));opacity:.85}
+.waveform i:nth-child(3n){height:52px}.waveform i:nth-child(3n+1){height:24px}.waveform i:nth-child(3n+2){height:38px}
+.release-controls{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.release-play{width:60px;height:60px;border:0;border-radius:50%;background:var(--accent);font-size:1.2rem;font-weight:1000;cursor:pointer}
+.release-time{color:var(--muted);font-size:.82rem;margin-left:4px}
+.beat-feature{
+  min-height:430px;margin-bottom:28px;position:relative;overflow:hidden;border:1px solid var(--line);
+  display:flex;align-items:flex-end;background:#090a0c
+}
+.beat-feature img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1);opacity:.66}
+.beat-feature:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.92),rgba(0,0,0,.28)),linear-gradient(0deg,rgba(0,0,0,.78),transparent 60%)}
+.beat-feature-copy{position:relative;z-index:2;padding:42px;max-width:650px}
+.beat-feature-copy h3{font-size:clamp(2.2rem,5vw,4.8rem);margin:7px 0 15px;letter-spacing:-.05em}
+.beat-feature-copy p{color:#c7cbd3;line-height:1.75}
+@media(max-width:850px){.release-shell{grid-template-columns:1fr}.release-art{min-height:260px}.beat-feature{min-height:520px}.beat-feature-copy{padding:28px}}
+
 .tracks{display:grid;gap:13px}
 .empty{
   padding:32px;text-align:center;background:var(--panel);border:1px solid var(--line);color:var(--muted)
@@ -210,6 +252,31 @@ h2{font-size:clamp(2.7rem,5.4vw,5rem)}
 input[type=range]{width:100%;accent-color:var(--accent)}
 .volume{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:.78rem}
 
+
+.beat-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:16px
+}
+.beat-card{
+  padding:24px;background:linear-gradient(145deg,var(--panel2),var(--panel));
+  border:1px solid var(--line);transition:.2s;position:relative;overflow:hidden
+}
+.beat-card:hover{transform:translateY(-5px);border-color:rgba(183,255,47,.5)}
+.beat-card:before{
+  content:"";position:absolute;width:130px;height:130px;border-radius:50%;
+  right:-55px;top:-55px;background:rgba(183,255,47,.08)
+}
+.beat-card h3{margin:0 0 8px;font-size:1.35rem}
+.beat-card p{color:var(--muted);line-height:1.65;min-height:80px}
+.beat-meta{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}
+.beat-meta span{font-size:.72rem;border:1px solid var(--line);padding:7px 9px;border-radius:999px;color:var(--muted)}
+.price{font-size:1.7rem;font-weight:1000;margin:16px 0}
+.license-note{
+  margin-top:22px;padding:18px;border-left:3px solid var(--accent);
+  background:rgba(183,255,47,.05);color:var(--muted);line-height:1.7
+}
+.download-link{margin-left:10px}
+@media(max-width:850px){.beat-grid{grid-template-columns:1fr}}
+
 footer{
   padding:30px 0 50px;border-top:1px solid var(--line);
   display:flex;justify-content:space-between;color:var(--muted);font-size:.8rem
@@ -266,26 +333,33 @@ footer{
       <div class="disc"></div>
       <div class="cover">
         <small>YENİ SINGLE</small>
-        <strong>GECE YOLU</strong>
+        <strong>UNUTURUM SANMAM</strong>
         <span>RevielOne</span>
       </div>
     </div>
   </section>
 
-  <section id="muzikler" class="reveal">
+<section id="muzikler" class="reveal">
     <div class="section-head">
-      <div><p class="eyebrow">DİSKOGRAFİ</p><h2>Şarkılar</h2></div>
-      <p>Bilgisayarından MP3, WAV veya M4A seç. Şarkılar sadece bu sayfada çalınır ve hiçbir yere yüklenmez.</p>
+      <div><p class="eyebrow">YENİ PARÇA</p><h2>Şimdi Dinle</h2></div>
+      <p>Standart şarkı listesi yerine, tek parçaya odaklanan modern bir yayın arayüzü.</p>
     </div>
 
-    <div class="upload">
-      <p><strong>Parçalarını ekle</strong><br>Birden fazla şarkıyı aynı anda seçebilirsin.</p>
-      <label class="btn primary" for="fileInput">Şarkı Ekle</label>
-      <input id="fileInput" type="file" accept="audio/*" multiple>
-    </div>
-
-    <div id="tracks" class="tracks">
-      <div class="empty">Henüz şarkı eklenmedi. “Şarkı Ekle” düğmesine bas.</div>
+    <div class="release-shell" id="publishedTrack">
+      <div class="release-art"></div>
+      <div class="release-info">
+        <p class="eyebrow">REVIELONE · YSF MUSIC</p>
+        <h3>Unuturum Sanmam</h3>
+        <p>Karanlık atmosfer, güçlü vokal ve modern rap sound'u. Parçayı buradan dinleyebilir veya MP3 olarak indirebilirsin.</p>
+        <div class="waveform" aria-hidden="true">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+        <div class="release-controls">
+          <button class="release-play" id="publishedPlay" aria-label="Şarkıyı oynat veya duraklat">▶</button>
+          <span class="release-time">Unuturum Sanmam · RevielOne</span>
+          <a class="btn primary download-link" href="unuturum-sanmam.mp3" download="RevielOne - Unuturum Sanmam.mp3" onclick="event.stopPropagation()">MP3 İndir</a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -307,24 +381,53 @@ footer{
   </section>
 
 
-  <section id="beatler" class="reveal">
+<section id="beatler" class="reveal">
     <div class="section-head">
-      <div><p class="eyebrow">PRODÜKSİYON</p><h2>Beatler</h2></div>
-      <p>Trap, drill, melodic rap ve karanlık atmosferli beat çalışmaları. Lisans, özel beat veya ortak proje için iletişime geçebilirsin.</p>
+      <div><p class="eyebrow">BEAT STORE</p><h2>Beatler</h2></div>
+      <p>Beat dosyaları herkese açık indirilemez. Alıcı “Satın Al” düğmesiyle sipariş verir; ödeme onaylandıktan sonra lisans ve beat dosyası gönderilir.</p>
     </div>
-    <div class="social-grid">
-      <div class="social">
-        <strong>Trap Beat</strong>
-        <span>Modern 808, karanlık melodi ve güçlü davullar</span>
+
+    <div class="beat-feature">
+      <img src="beat-kapak.jpg" alt="RevielOne beat kapak görseli">
+      <div class="beat-feature-copy">
+        <p class="eyebrow">REVIELONE BEAT STORE</p>
+        <h3>Karanlık sound. Özgün üretim.</h3>
+        <p>Trap, drill ve melodik rap projeleri için hazırlanan beatleri keşfet. Lisans ve özel prodüksiyon talepleri için doğrudan iletişime geç.</p>
+        <a class="btn primary" href="mailto:ysfmuzik02763@gmail.com?subject=RevielOne%20Beat%20Talebi">Beat İçin İletişime Geç</a>
       </div>
-      <div class="social">
-        <strong>Drill Beat</strong>
-        <span>Sert bass, hızlı hi-hat ve agresif atmosfer</span>
-      </div>
-      <div class="social">
-        <strong>Melodic Beat</strong>
-        <span>Duygusal melodiler ve vokale uygun düzenleme</span>
-      </div>
+    </div>
+
+    <div class="beat-grid">
+      <article class="beat-card">
+        <p class="eyebrow">TRAP</p>
+        <h3>Night Pressure</h3>
+        <p>Karanlık piyano, güçlü 808 ve modern trap davulları. Rap ve melodik vokaller için uygundur.</p>
+        <div class="beat-meta"><span>145 BPM</span><span>F# Minör</span><span>MP3 Lisans</span></div>
+        <div class="price">500 TL</div>
+        <a class="btn primary" href="mailto:ysfmuzik02763@gmail.com?subject=Beat%20Satın%20Alma%20-%20Night%20Pressure&body=Merhaba%2C%20Night%20Pressure%20beatini%20satın%20almak%20istiyorum.%20Ödeme%20ve%20lisans%20bilgilerini%20gönderebilir%20misiniz%3F">Satın Al</a>
+      </article>
+
+      <article class="beat-card">
+        <p class="eyebrow">DRILL</p>
+        <h3>Cold Street</h3>
+        <p>Sert bass, kaygan 808 geçişleri ve agresif davullar. Drill vokalleri için boşluklu düzenleme.</p>
+        <div class="beat-meta"><span>142 BPM</span><span>D Minör</span><span>MP3 Lisans</span></div>
+        <div class="price">500 TL</div>
+        <a class="btn primary" href="mailto:ysfmuzik02763@gmail.com?subject=Beat%20Satın%20Alma%20-%20Cold%20Street&body=Merhaba%2C%20Cold%20Street%20beatini%20satın%20almak%20istiyorum.%20Ödeme%20ve%20lisans%20bilgilerini%20gönderebilir%20misiniz%3F">Satın Al</a>
+      </article>
+
+      <article class="beat-card">
+        <p class="eyebrow">MELODIC</p>
+        <h3>Lost Memory</h3>
+        <p>Duygusal gitar, atmosferik pad ve vokale alan bırakan modern düzenleme.</p>
+        <div class="beat-meta"><span>130 BPM</span><span>A Minör</span><span>MP3 Lisans</span></div>
+        <div class="price">500 TL</div>
+        <a class="btn primary" href="mailto:ysfmuzik02763@gmail.com?subject=Beat%20Satın%20Alma%20-%20Lost%20Memory&body=Merhaba%2C%20Lost%20Memory%20beatini%20satın%20almak%20istiyorum.%20Ödeme%20ve%20lisans%20bilgilerini%20gönderebilir%20misiniz%3F">Satın Al</a>
+      </article>
+    </div>
+
+    <div class="license-note">
+      <strong>Satın alma sistemi:</strong> Sitede beat indirme bağlantısı bulunmaz. Sipariş e-postası sana gelir; ödeme tamamlandıktan sonra beat dosyasını ve lisans koşullarını alıcıya sen gönderirsin. Otomatik ödeme sonrası indirme için daha sonra bir ödeme mağazası bağlanmalıdır.
     </div>
   </section>
 
@@ -344,7 +447,7 @@ footer{
     <p class="eyebrow">İLETİŞİM</p>
     <h2>Birlikte üretelim.</h2>
     <p>Beat satın alma, özel beat, düet, etkinlik veya proje teklifleri için:</p>
-    <a class="mail" href="mailto:mail@example.com">mail@example.com</a>
+    <a class="mail" href="mailto:ysfmuzik02763@gmail.com">ysfmuzik02763@gmail.com</a>
   </section>
 </main>
 
@@ -373,80 +476,49 @@ footer{
   <span>YSF Music</span>
 </footer>
 
+
 <script>
-const input=document.getElementById('fileInput');
-const coverInput=document.getElementById('coverInput');
-const profileImage=document.getElementById('profileImage');
-const profilePlaceholder=document.getElementById('profilePlaceholder');
-const list=document.getElementById('tracks');
 const audio=document.getElementById('audio');
 const mainPlay=document.getElementById('mainPlay');
+const publishedPlay=document.getElementById('publishedPlay');
+const publishedTrack=document.getElementById('publishedTrack');
 const title=document.getElementById('title');
 const seek=document.getElementById('seek');
 const current=document.getElementById('current');
 const duration=document.getElementById('duration');
 const volume=document.getElementById('volume');
-let items=[],currentIndex=-1;
+
+audio.src='unuturum-sanmam.mp3';
+title.textContent='Unuturum Sanmam';
+audio.volume=volume.value;
 
 function fmt(s){
   if(!Number.isFinite(s))return'0:00';
   const m=Math.floor(s/60),x=Math.floor(s%60).toString().padStart(2,'0');
   return m+':'+x;
 }
-function cleanName(name){
-  return name.replace(/\.[^/.]+$/,'').replace(/[_-]+/g,' ');
-}
-function render(){
-  list.innerHTML='';
-  if(!items.length){
-    list.innerHTML='<div class="empty">Henüz şarkı eklenmedi. “Şarkı Ekle” düğmesine bas.</div>';
-    return;
-  }
-  items.forEach((item,i)=>{
-    const row=document.createElement('div');
-    row.className='track'+(i===currentIndex?' active':'');
-    row.innerHTML=
-      '<button class="play">'+(i===currentIndex&&!audio.paused?'❚❚':'▶')+'</button>'+
-      '<div><h3>'+item.title+'</h3><p>RevielOne</p></div>'+
-      '<span class="tag">Yerel dosya</span>';
-    row.onclick=()=>{if(i!==currentIndex)load(i);toggle()};
-    list.appendChild(row);
-  });
-}
-function load(i){
-  currentIndex=i;
-  audio.src=items[i].url;
-  title.textContent=items[i].title;
-  seek.value=0;current.textContent='0:00';duration.textContent='0:00';
-  render();
-}
 async function toggle(){
-  if(currentIndex<0){
-    alert('Önce “Şarkı Ekle” düğmesiyle bir şarkı seç.');
-    return;
-  }
   if(audio.paused){
     try{await audio.play()}
-    catch(e){alert('Şarkı açılamadı. Başka bir ses dosyası dene.')}
-  }else audio.pause();
+    catch(e){alert('Şarkı açılamadı. MP3 dosyasının index.html ile aynı klasörde olduğundan emin ol.')}
+  }else{
+    audio.pause();
+  }
 }
 
-input.addEventListener('change',e=>{
-  items.forEach(x=>URL.revokeObjectURL(x.url));
-  items=[...e.target.files].map(f=>({title:cleanName(f.name),url:URL.createObjectURL(f)}));
-  if(items.length)load(0);
-  render();
-});
-coverInput.addEventListener('change',e=>{
-  const file=e.target.files[0];
-  if(!file)return;
-  profileImage.src=URL.createObjectURL(file);
-  profileImage.style.display='block';
-  profilePlaceholder.style.display='none';
-});
 mainPlay.onclick=toggle;
-audio.onplay=()=>{mainPlay.textContent='❚❚';render()};
-audio.onpause=()=>{mainPlay.textContent='▶';render()};
+publishedPlay.onclick=(e)=>{e.stopPropagation();toggle()};
+publishedTrack.onclick=toggle;
+
+audio.onplay=()=>{
+  mainPlay.textContent='❚❚';
+  publishedPlay.textContent='❚❚';
+  publishedTrack.classList.add('active');
+};
+audio.onpause=()=>{
+  mainPlay.textContent='▶';
+  publishedPlay.textContent='▶';
+};
 audio.onloadedmetadata=()=>duration.textContent=fmt(audio.duration);
 audio.ontimeupdate=()=>{
   current.textContent=fmt(audio.currentTime);
@@ -454,10 +526,6 @@ audio.ontimeupdate=()=>{
 };
 seek.oninput=()=>{if(audio.duration)audio.currentTime=(seek.value/100)*audio.duration};
 volume.oninput=()=>audio.volume=volume.value;
-audio.onended=()=>{
-  if(items.length){load((currentIndex+1)%items.length);toggle()}
-};
-audio.volume=volume.value;
 
 const observer=new IntersectionObserver(entries=>{
   entries.forEach(entry=>{
@@ -466,5 +534,6 @@ const observer=new IntersectionObserver(entries=>{
 },{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 </script>
+
 </body>
 </html>
