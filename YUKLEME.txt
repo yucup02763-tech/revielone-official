@@ -1,0 +1,12 @@
+REVIELONE — SADECE GUNCELLEME DOSYALARI
+
+Bu pakette MP3 ve beat-kapak.jpg yoktur; GitHub deposunda bulunan mevcut dosyalar kullanılmaya devam eder.
+
+GitHub deposunun ana klasörüne şu dosyaları yükle:
+- index.html (mevcut dosyanın yerine)
+- robots.txt
+- sitemap.xml
+- favicon.svg
+- .nojekyll
+
+Dosya değiştirme uyarısı çıkarsa onayla.

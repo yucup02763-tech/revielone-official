@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yucup02763-tech.github.io/revielone-official/sitemap.xml
